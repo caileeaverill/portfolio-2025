@@ -1,14 +1,15 @@
-import React from 'react'
-import Hero from './sections/Hero'
-import { ThemeProvider } from './components/ThemeProvider'
 import { ModeToggle } from './components/ModeToggle'
+import { ThemeProvider } from './components/ThemeProvider'
+import Hero from './sections/Hero'
+import CardSection from './sections/CardSection'
+
 
 const children = (
   <>
     <ModeToggle />
     <Hero />
-    <div className='h-screen'>
-
+    <div className='p-4'>
+      <CardSection />
     </div>
   </>
 )
