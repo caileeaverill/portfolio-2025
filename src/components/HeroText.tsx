@@ -7,9 +7,7 @@ export function HeroText() {
     return (
         <div className="relative mx-auto my-10 flex max-w-7xl flex-col items-center justify-center">
             <div className="px-4 py-10 md:py-20">
-                <h1 className="bg-clip-text text-transparent text-center 
-               bg-gradient-to-b from-indigo-500 to-pink-500 
-               dark:from-purple-400 dark:to-pink-200
+                <h1 className="text-white
                text-2xl md:text-4xl lg:text-7xl font-sans 
                py-2 md:py-5 relative z-20 font-bold tracking-wide">
                     {"Hello. My name is Cailee! "

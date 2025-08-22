@@ -1,16 +1,16 @@
 import React from "react";
+
 import HeroText from "@/components/HeroText";
-import { Spotlight } from "@/components/ui/spotlight";
+import ModeToggle from "@/components/ModeToggle";
 
-
-export default function SpotlightHero() {
+export function Hero() {
     return (
-        <div className="relative flex h-[40rem] w-full overflow-hidden bg-black/[0.96] antialiased md:items-center md:justify-center">
-            <HeroText />
-            <Spotlight
-                className="-top-40 left-0 md:-top-20 md:left-60"
-                fill="white"
-            />
-        </div>
+        <>
+            <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl">
+                <HeroText />
+            </div>
+        </>
     );
 }
+
+export default Hero;
