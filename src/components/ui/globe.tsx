@@ -1,6 +1,6 @@
 "use client";
 
-import createGlobe, { type COBEOptions } from "cobe"; // ✅ type-only import
+import createGlobe, { type COBEOptions } from "cobe";
 import { useMotionValue, useSpring } from "motion/react";
 import { useEffect, useRef } from "react";
 
@@ -80,7 +80,6 @@ export function Globe({
       width: width * 2,
       height: width * 2,
       onRender: (state) => {
-        // ✅ explicit null check so 0 isn't treated as "false"
         if (pointerInteracting.current === null) phi += 0.005;
         state.phi = phi + rs.get();
         state.width = width * 2;
