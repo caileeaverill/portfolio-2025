@@ -4,7 +4,7 @@ import { Globe } from "@/components/ui/globe";
 export const SkeletonOne = () => {
     return (
         <img
-            src="/public/images/me.jpg"
+            src="/images/me.jpg"
             alt=""
             className="w-full h-64 rounded-2xl object-cover bg-top"
         />
@@ -50,49 +50,49 @@ export const SkeletonThree = () => {
             >
                 <div className="flex flex-wrap justify-center items-center gap-2">
                     <img
-                        src="/public/images/react.svg"
+                        src="/images/react.svg"
                         alt="React logo"
                         height="100"
                         width="100"
                         className="h-10 w-10"
                     />
                     <img
-                        src="/public/images/typescript-icon.svg"
+                        src="/images/typescript-icon.svg"
                         alt="TypeScript logo"
                         height="100"
                         width="100"
                         className="h-10 w-10"
                     />
                     <img
-                        src="/public/images/nodejs-icon.svg"
+                        src="/images/nodejs-icon.svg"
                         alt="Node.js logo"
                         height="100"
                         width="100"
                         className="h-10 w-10"
                     />
                     <img
-                        src="/public/images/css-3.svg"
+                        src="/images/css-3.svg"
                         alt="CSS3 logo"
                         height="100"
                         width="100"
                         className="h-10 w-10"
                     />
                     <img
-                        src="/public/images/tailwindcss-icon.svg"
+                        src="/images/tailwindcss-icon.svg"
                         alt="Tailwind CSS logo"
                         height="100"
                         width="100"
                         className="h-10 w-10"
                     />
                     <img
-                        src="/public/images/bootstrap.svg"
+                        src="/images/bootstrap.svg"
                         alt="Bootstrap logo"
                         height="100"
                         width="100"
                         className="h-10 w-10"
                     />
                     <img
-                        src="/public/images/html-5.svg"
+                        src="/images/html-5.svg"
                         alt="HTML5 logo"
                         height="100"
                         width="100"
@@ -100,7 +100,7 @@ export const SkeletonThree = () => {
                     />
                     <div className="dark:bg-white rounded-full">
                         <img
-                            src="/public/images/express.svg"
+                            src="/images/express.svg"
                             alt="Express.js logo"
                             height="100"
                             width="100"
@@ -108,7 +108,7 @@ export const SkeletonThree = () => {
                         />
                     </div>
                     <img
-                        src="/public/images/mongodb-icon.svg"
+                        src="/images/mongodb-icon.svg"
                         alt="MongoDB logo"
                         height="100"
                         width="100"
@@ -124,42 +124,42 @@ export const SkeletonThree = () => {
             <motion.div className="h-full relative z-20 w-1/3 rounded-2xl bg-white p-4 dark:bg-black/[0.2] dark:border-transparent border border-neutral-200 flex flex-col items-center justify-center">
                 <div className="flex flex-wrap justify-center items-center gap-4">
                     <img
-                        src="/public/images/figma.svg"
+                        src="/images/figma.svg"
                         alt="Figma logo"
                         height="100"
                         width="100"
                         className="h-10 w-10"
                     />
                     <img
-                        src="/public/images/zendesk.svg"
+                        src="/images/zendesk.svg"
                         alt="Zendesk logo"
                         height="100"
                         width="100"
                         className="h-10 w-10"
                     />
                     <img
-                        src="/public/images/github-icon.svg"
+                        src="/images/github-icon.svg"
                         alt="GitHub logo"
                         height="100"
                         width="100"
                         className="h-10 w-10"
                     />
                     <img
-                        src="/public/images/salesforce.svg"
+                        src="/images/salesforce.svg"
                         alt="Salesforce logo"
                         height="100"
                         width="100"
                         className="h-10 w-10"
                     />
                     <img
-                        src="/public/images/jira.svg"
+                        src="/images/jira.svg"
                         alt="Jira logo"
                         height="100"
                         width="100"
                         className="h-10 w-10"
                     />
                     <img
-                        src="/public/images/vitejs.svg"
+                        src="/images/vitejs.svg"
                         alt="Vite.js logo"
                         height="100"
                         width="100"
@@ -177,21 +177,21 @@ export const SkeletonThree = () => {
             >
                 <div className="flex flex-wrap justify-center items-center gap-4">
                     <img
-                        src="/public/images/google-tag-manager.svg"
+                        src="/images/google-tag-manager.svg"
                         alt="Google Tag Manager logo"
                         height="100"
                         width="100"
                         className="h-10 w-10"
                     />
                     <img
-                        src="/public/images/wcag img.png"
+                        src="/images/wcag img.png"
                         alt="WCAG accessibility guidelines logo"
                         height="100"
                         width="100"
                         className="h-10 w-20"
                     />
                     <img
-                        src="/public/images/seo.png"
+                        src="/images/seo.png"
                         alt="SEO icon"
                         height="100"
                         width="100"

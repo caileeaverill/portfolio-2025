@@ -10,7 +10,7 @@ export function HigherLogicPin() {
             >
                 <div className="flex basis-full flex-col tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
                     <img
-                        src="/public/screenshots/hl-screenshot.png"
+                        src="/screenshots/hl-screenshot.png"
                         alt=""
                         className="w-full h-full rounded-2xl object-cover bg-top"
                     />
