@@ -2,7 +2,7 @@ import { ModeToggle } from './components/ModeToggle'
 import { ThemeProvider } from './components/ThemeProvider'
 import Hero from './sections/Hero'
 import CardSection from './sections/CardSection'
-
+import EmploymentTimeline from './sections/EmploymentTimeline'
 
 const children = (
   <>
@@ -10,6 +10,7 @@ const children = (
     <Hero />
     <div className='p-4'>
       <CardSection />
+      <EmploymentTimeline />
     </div>
   </>
 )
