@@ -41,11 +41,11 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
           The journey so far
         </h3>
         <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base ">
-          Over the past six years, I’ve grown through challenges and opportunities that shaped me into the engineer I am today. Now, as a Software Engineer at Higher Logic, I’m proud to help build tools that bring associations and communities together.
+          Over the past six years, I’ve grown through challenges and opportunities that shaped me into the developer I am today. Now, as a front-end developer at Higher Logic, I’m proud to help build tools that bring associations and communities together.
         </p>
       </div>
 
-      <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
+      <div ref={ref} className="relative max-w-7xl mb-30 mx-auto ">
         {data.map((item, index) => (
           <div
             key={index}

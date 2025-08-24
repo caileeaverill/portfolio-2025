@@ -5,7 +5,7 @@ import { items } from "@/components/CardContent";
 
 export default function CardSection() {
     return (
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mb-15 mx-auto">
             <h3 className="my-4 text-3xl font-bold tracking-tight">
                 Get to know me
             </h3>
