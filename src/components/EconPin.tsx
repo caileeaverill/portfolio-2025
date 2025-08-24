@@ -6,11 +6,11 @@ export function eConPin() {
         <div className="h-[20rem] w-full flex items-center justify-center ">
             <PinContainer
                 title="eConverse Media Inc."
-                href="https://temporarylink.com/"
+                href="https://econversemedia.connectedcommunity.org/home"
             >
-                <div className="flex basis-full flex-col tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
+                <div className="flex basis-full flex-col tracking-tight text-slate-100/50 sm:basis-1/2 max-w-96 md:w-[25rem] h-[20rem] ">
                     <img
-                        src="/images/placeholder.svg"
+                        src="/screenshots/econ-screenshot.png"
                         alt=""
                         className="w-full h-full rounded-2xl object-cover bg-top"
                     />

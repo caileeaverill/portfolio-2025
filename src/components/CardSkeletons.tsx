@@ -1,5 +1,21 @@
+import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { Globe } from "@/components/ui/globe";
+
+function useMediaQuery(query: string) {
+    const [matches, setMatches] = useState(false);
+
+    useEffect(() => {
+        if (typeof window === "undefined") return;
+        const mql = window.matchMedia(query);
+        const onChange = () => setMatches(mql.matches);
+        setMatches(mql.matches);
+        mql.addEventListener("change", onChange);
+        return () => mql.removeEventListener("change", onChange);
+    }, [query]);
+
+    return matches;
+}
 
 export const SkeletonOne = () => {
     return (
@@ -10,200 +26,91 @@ export const SkeletonOne = () => {
         />
     );
 };
+
 export const SkeletonTwo = () => {
-    return (
-        <Globe />
-    );
+    return <Globe />;
 };
 
 export const SkeletonThree = () => {
-    const first = {
-        initial: {
-            x: 20,
-            rotate: -5,
-        },
-        hover: {
-            x: 0,
-            rotate: 0,
-        },
-    };
-    const second = {
-        initial: {
-            x: -20,
-            rotate: 5,
-        },
-        hover: {
-            x: 0,
-            rotate: 0,
-        },
-    };
+    const isAboveMd = useMediaQuery("(min-width: 768px)");
+
+    const Container = isAboveMd ? motion.div : ("div" as const);
+    const CardA = isAboveMd ? motion.div : ("div" as const);
+    const CardB = isAboveMd ? motion.div : ("div" as const);
+    const CardC = isAboveMd ? motion.div : ("div" as const);
+
+    const first = isAboveMd
+        ? {
+            initial: { x: 20, rotate: -5 },
+            hover: { x: 0, rotate: 0 },
+        }
+        : undefined;
+
+    const second = isAboveMd
+        ? {
+            initial: { x: -20, rotate: 5 },
+            hover: { x: 0, rotate: 0 },
+        }
+        : undefined;
+
+    const containerMotionProps = isAboveMd
+        ? ({ initial: "initial", animate: "animate", whileHover: "hover" } as const)
+        : ({} as const);
+
     return (
-        <motion.div
-            initial="initial"
-            animate="animate"
-            whileHover="hover"
-            className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-row space-x-4"
+        <Container
+            {...containerMotionProps}
+            className="flex gap-4 flex-wrap w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-row space-x-4 md:flex-nowrap md:gap-0"
         >
-            <motion.div
-                variants={first}
-                className="h-full w-1/3 rounded-2xl bg-white p-4 dark:bg-black/[0.2] dark:border-transparent border border-neutral-200 flex flex-col items-center justify-center"
+            <CardA
+                {...(isAboveMd ? { variants: first } : {})}
+                className="w-full m-0 md:mr-4 md:w-1/3 md:h-full rounded-2xl bg-white p-4 dark:bg-black/[0.2] dark:border-transparent border border-neutral-200 flex flex-col items-center justify-center"
             >
                 <div className="flex flex-wrap justify-center items-center gap-2">
-                    <img
-                        src="/images/react.svg"
-                        alt="React logo"
-                        height="100"
-                        width="100"
-                        className="h-10 w-10"
-                    />
-                    <img
-                        src="/images/typescript-icon.svg"
-                        alt="TypeScript logo"
-                        height="100"
-                        width="100"
-                        className="h-10 w-10"
-                    />
-                    <img
-                        src="/images/nodejs-icon.svg"
-                        alt="Node.js logo"
-                        height="100"
-                        width="100"
-                        className="h-10 w-10"
-                    />
-                    <img
-                        src="/images/css-3.svg"
-                        alt="CSS3 logo"
-                        height="100"
-                        width="100"
-                        className="h-10 w-10"
-                    />
-                    <img
-                        src="/images/tailwindcss-icon.svg"
-                        alt="Tailwind CSS logo"
-                        height="100"
-                        width="100"
-                        className="h-10 w-10"
-                    />
-                    <img
-                        src="/images/bootstrap.svg"
-                        alt="Bootstrap logo"
-                        height="100"
-                        width="100"
-                        className="h-10 w-10"
-                    />
-                    <img
-                        src="/images/html-5.svg"
-                        alt="HTML5 logo"
-                        height="100"
-                        width="100"
-                        className="h-10 w-10"
-                    />
+                    <img src="/images/react.svg" alt="React logo" height="100" width="100" className="h-10 w-10" />
+                    <img src="/images/typescript-icon.svg" alt="TypeScript logo" height="100" width="100" className="h-10 w-10" />
+                    <img src="/images/nodejs-icon.svg" alt="Node.js logo" height="100" width="100" className="h-10 w-10" />
+                    <img src="/images/css-3.svg" alt="CSS3 logo" height="100" width="100" className="h-10 w-10" />
+                    <img src="/images/tailwindcss-icon.svg" alt="Tailwind CSS logo" height="100" width="100" className="h-10 w-10" />
+                    <img src="/images/bootstrap.svg" alt="Bootstrap logo" height="100" width="100" className="h-10 w-10" />
+                    <img src="/images/html-5.svg" alt="HTML5 logo" height="100" width="100" className="h-10 w-10" />
                     <div className="dark:bg-white rounded-full">
-                        <img
-                            src="/images/express.svg"
-                            alt="Express.js logo"
-                            height="100"
-                            width="100"
-                            className="h-10 w-10 p-1"
-                        />
+                        <img src="/images/express.svg" alt="Express.js logo" height="100" width="100" className="h-10 w-10 p-1" />
                     </div>
-                    <img
-                        src="/images/mongodb-icon.svg"
-                        alt="MongoDB logo"
-                        height="100"
-                        width="100"
-                        className="h-10 w-10"
-                    />
+                    <img src="/images/mongodb-icon.svg" alt="MongoDB logo" height="100" width="100" className="h-10 w-10" />
                 </div>
-
-
                 <p className="border border-blue-500 bg-blue-100 dark:bg-blue-900/20 text-blue-600 text-xs rounded-full px-2 py-0.5 mt-4">
                     Web Development
                 </p>
-            </motion.div>
-            <motion.div className="h-full relative z-20 w-1/3 rounded-2xl bg-white p-4 dark:bg-black/[0.2] dark:border-transparent border border-neutral-200 flex flex-col items-center justify-center">
-                <div className="flex flex-wrap justify-center items-center gap-4">
-                    <img
-                        src="/images/figma.svg"
-                        alt="Figma logo"
-                        height="100"
-                        width="100"
-                        className="h-10 w-10"
-                    />
-                    <img
-                        src="/images/zendesk.svg"
-                        alt="Zendesk logo"
-                        height="100"
-                        width="100"
-                        className="h-10 w-10"
-                    />
-                    <img
-                        src="/images/github-icon.svg"
-                        alt="GitHub logo"
-                        height="100"
-                        width="100"
-                        className="h-10 w-10"
-                    />
-                    <img
-                        src="/images/salesforce.svg"
-                        alt="Salesforce logo"
-                        height="100"
-                        width="100"
-                        className="h-10 w-10"
-                    />
-                    <img
-                        src="/images/jira.svg"
-                        alt="Jira logo"
-                        height="100"
-                        width="100"
-                        className="h-10 w-10"
-                    />
-                    <img
-                        src="/images/vitejs.svg"
-                        alt="Vite.js logo"
-                        height="100"
-                        width="100"
-                        className="h-10 w-10"
-                    />
-                </div>
+            </CardA>
 
+            <CardB className="w-full m-0 md:mr-4 relative z-20 md:w-1/3 md:h-full rounded-2xl bg-white p-4 dark:bg-black/[0.2] dark:border-transparent border border-neutral-200 flex flex-col items-center justify-center">
+                <div className="flex flex-wrap justify-center items-center gap-4">
+                    <img src="/images/figma.svg" alt="Figma logo" height="100" width="100" className="h-10 w-10" />
+                    <img src="/images/zendesk.svg" alt="Zendesk logo" height="100" width="100" className="h-10 w-10" />
+                    <img src="/images/github-icon.svg" alt="GitHub logo" height="100" width="100" className="h-10 w-10" />
+                    <img src="/images/salesforce.svg" alt="Salesforce logo" height="100" width="100" className="h-10 w-10" />
+                    <img src="/images/jira.svg" alt="Jira logo" height="100" width="100" className="h-10 w-10" />
+                    <img src="/images/vitejs.svg" alt="Vite.js logo" height="100" width="100" className="h-10 w-10" />
+                </div>
                 <p className="border border-green-500 bg-green-100 dark:bg-green-900/20 text-green-600 text-xs rounded-full px-2 py-0.5 mt-4">
                     Tools
                 </p>
-            </motion.div>
-            <motion.div
-                variants={second}
-                className="h-full w-1/3 rounded-2xl bg-white p-4 dark:bg-black/[0.2] dark:border-transparent border border-neutral-200 flex flex-col items-center justify-center"
+            </CardB>
+
+            <CardC
+                {...(isAboveMd ? { variants: second } : {})}
+                className="w-full md:w-1/3 md:h-full rounded-2xl bg-white p-4 dark:bg-black/[0.2] dark:border-transparent border border-neutral-200 flex flex-col items-center justify-center"
             >
                 <div className="flex flex-wrap justify-center items-center gap-4">
-                    <img
-                        src="/images/google-tag-manager.svg"
-                        alt="Google Tag Manager logo"
-                        height="100"
-                        width="100"
-                        className="h-10 w-10"
-                    />
-                    <img
-                        src="/images/wcag img.png"
-                        alt="WCAG accessibility guidelines logo"
-                        height="100"
-                        width="100"
-                        className="h-10 w-20"
-                    />
-                    <img
-                        src="/images/seo.png"
-                        alt="SEO icon"
-                        height="100"
-                        width="100"
-                        className="h-10 w-10"
-                    />
+                    <img src="/images/google-tag-manager.svg" alt="Google Tag Manager logo" height="100" width="100" className="h-10 w-10" />
+                    <img src="/images/wcag img.png" alt="WCAG accessibility guidelines logo" height="100" width="100" className="h-10 w-20" />
+                    <img src="/images/seo.png" alt="SEO icon" height="100" width="100" className="h-10 w-10" />
                 </div>
-
-
                 <p className="border border-red-500 bg-orange-100 dark:bg-red-900/20 text-red-600 text-xs rounded-full px-2 py-0.5 mt-4">
                     SEO
                 </p>
-            </motion.div>
-        </motion.div>
+            </CardC>
+        </Container>
     );
 };
