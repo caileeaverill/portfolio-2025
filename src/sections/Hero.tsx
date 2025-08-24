@@ -7,7 +7,7 @@ export function Hero() {
         <div className="relative h-[30rem] mx-auto my-10 flex max-w-7xl flex-col items-center justify-center">
             <div className="px-4 py-10 md:py-20">
                 <h1 className="text-center
-               text-2xl md:text-4xl lg:text-7xl font-sans 
+               text-5xl lg:text-7xl font-sans 
                py-2 md:py-5 relative z-20 font-bold tracking-wide dark:text-white">
                     {"Hello. My name is Cailee. "
                         .split(" ")
