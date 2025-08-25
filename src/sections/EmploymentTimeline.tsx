@@ -9,7 +9,7 @@ export function EmploymentTimeline() {
             title: "March 2023 to Present",
             content: (
                 <div>
-                    <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+                    <p className="mb-8 text-xs font-bold text-neutral-800 md:text-sm dark:text-neutral-200">
                         Joined Higher Logic, the industry leader in online community and engagement solutions for associations as a front-end developer in 2023.
                     </p>
                     <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
@@ -25,7 +25,7 @@ export function EmploymentTimeline() {
             title: "November 2019 to March 2023",
             content: (
                 <div>
-                    <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+                    <p className="mb-8 text-xs font-bold text-neutral-800 md:text-sm dark:text-neutral-200">
                         Started my journey with a small start up of 10 people called eConverse Media Inc. in November of 2019 as a front-end developer.
                     </p>
                     <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">

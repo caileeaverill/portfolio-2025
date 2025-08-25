@@ -8,11 +8,11 @@ export function eConPin() {
                 title="eConverse Media Inc."
                 href="https://econversemedia.connectedcommunity.org/home"
             >
-                <div className="flex basis-full flex-col tracking-tight text-slate-100/50 sm:basis-1/2 max-w-96 md:w-[25rem] h-[20rem] ">
+                <div className="flex basis-full flex-col tracking-tight text-slate-100/50 sm:basis-1/2 w-96 md:w-[25rem] h-[20rem] ">
                     <img
                         src="/screenshots/econ-screenshot.png"
                         alt=""
-                        className="w-full h-full rounded-2xl object-cover bg-top"
+                        className="w-full h-full rounded-2xl object-cover"
                     />
                 </div>
             </PinContainer>

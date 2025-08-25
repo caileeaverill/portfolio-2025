@@ -8,7 +8,7 @@ export function HigherLogicPin() {
                 title="Higher Logic"
                 href="https://www.higherlogic.com/"
             >
-                <div className="flex basis-full flex-col tracking-tight text-slate-100/50 sm:basis-1/2 max-w-96 md:w-[25rem] h-[20rem] ">
+                <div className="flex basis-full flex-col tracking-tight text-slate-100/50 sm:basis-1/2 w-96 md:w-[25rem] h-[20rem] ">
                     <img
                         src="/screenshots/hl-screenshot.png"
                         alt=""
