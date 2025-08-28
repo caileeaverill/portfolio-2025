@@ -3,7 +3,7 @@ import HigherLogicPin from "@/components/HigherLogicPin";
 import EconPin from "@/components/EconPin";
 
 
-export function EmploymentTimeline() {
+export function Experience() {
     const data = [
         {
             title: "March 2023 to Present",
@@ -40,10 +40,13 @@ export function EmploymentTimeline() {
 
     ];
     return (
-        <div className="relative w-full overflow-clip">
-            <Timeline data={data} />
-        </div>
+        <section id="experience" className="scroll-mt-10">
+            <div className="relative w-full overflow-clip">
+                <Timeline data={data} />
+            </div>
+        </section>
+
     );
 }
 
-export default EmploymentTimeline;
+export default Experience;

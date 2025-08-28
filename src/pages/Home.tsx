@@ -1,16 +1,16 @@
 import Hero from "../sections/Hero";
-import CardSection from "../sections/CardSection";
-import EmploymentTimeline from "../sections/EmploymentTimeline";
-import PortfolioSection from "../sections/PortfolioSection";
+import About from "@/sections/About";
+import Experience from "@/sections/Experience";
+import Projects from "@/sections/Projects";
 
 export default function Home() {
     return (
         <>
             <Hero />
             <div className="p-4">
-                <CardSection />
-                <EmploymentTimeline />
-                <PortfolioSection />
+                <About />
+                <Experience />
+                <Projects />
             </div>
         </>
     );

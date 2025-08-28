@@ -1,7 +1,8 @@
 "use client";
 
 import Carousel from "@/components/ui/carousel";
-export function PortfolioCarousel() {
+
+export function ProjectCarousel() {
     const slideData = [
         {
             subtitle: "Case Study",
@@ -47,4 +48,4 @@ export function PortfolioCarousel() {
     );
 }
 
-export default PortfolioCarousel;
+export default ProjectCarousel;

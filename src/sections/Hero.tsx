@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 
 export function Hero() {
     return (
-        <div className="relative h-[30rem] mx-auto my-12 flex max-w-7xl flex-col items-center justify-center">
+        <div className="relative h-[45rem] md:h-[30rem] mx-auto my-12 flex max-w-7xl flex-col items-center justify-center">
             <div className="px-4 py-10 md:py-20">
                 <h1 className="text-center
                text-5xl lg:text-7xl font-sans 

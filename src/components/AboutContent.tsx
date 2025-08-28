@@ -1,5 +1,4 @@
-import { SkeletonOne, SkeletonTwo, SkeletonThree } from "@/components/CardSkeletons";
-
+import { SkeletonOne, SkeletonTwo, SkeletonThree } from "./AboutSkeleton";
 
 export const items = [
     {
