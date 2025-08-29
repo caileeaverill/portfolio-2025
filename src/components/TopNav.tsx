@@ -2,10 +2,11 @@ import { ModeToggle } from './ModeToggle'
 
 const links = [
     { href: "/", text: "Home" },
-    { href: "#about", text: "About" },
-    { href: "#experience", text: "Experience" },
-    { href: "#projects", text: "Projects" },
-    { href: "#contact", text: "Hire Me" },
+    // { href: "#about", text: "About" },
+    // { href: "#experience", text: "Experience" },
+    // { href: "#projects", text: "Projects" },
+    { href: "/projects", text: "Projects" },
+    { href: "/hireme", text: "Hire Me" },
 ];
 
 const TopNav = () => {
