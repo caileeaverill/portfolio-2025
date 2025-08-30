@@ -1,4 +1,4 @@
-import { ThemeProvider } from './components/ThemeProvider'
+import { ThemeProvider } from './lib/theme/ThemeProvider'
 import { Outlet } from 'react-router'
 import TopNav from './components/TopNav'
 

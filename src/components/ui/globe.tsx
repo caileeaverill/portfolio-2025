@@ -20,20 +20,39 @@ const GLOBE_CONFIG: COBEOptions = {
   mapSamples: 16000,
   mapBrightness: 1.2,
   baseColor: [1, 1, 1],
-  markerColor: [251 / 255, 100 / 255, 21 / 255],
+  markerColor: [0, 0, 0],
   glowColor: [1, 1, 1],
   markers: [
-    { location: [14.5995, 120.9842], size: 0.03 },
-    { location: [19.076, 72.8777], size: 0.1 },
-    { location: [23.8103, 90.4125], size: 0.05 },
-    { location: [30.0444, 31.2357], size: 0.07 },
-    { location: [39.9042, 116.4074], size: 0.08 },
-    { location: [-23.5505, -46.6333], size: 0.1 },
-    { location: [19.4326, -99.1332], size: 0.1 },
-    { location: [40.7128, -74.006], size: 0.1 },
-    { location: [34.6937, 135.5022], size: 0.05 },
-    { location: [41.0082, 28.9784], size: 0.06 },
+    // 🇺🇸 USA
+    { location: [40.7128, -74.0060], size: 0.1 },   // New York
+    { location: [34.0522, -118.2437], size: 0.08 }, // Los Angeles
+    { location: [41.8781, -87.6298], size: 0.07 },  // Chicago
+    { location: [29.7604, -95.3698], size: 0.06 },  // Houston
+    { location: [47.6062, -122.3321], size: 0.05 }, // Seattle
+
+    // 🇨🇦 Canada
+    { location: [43.6532, -79.3832], size: 0.08 },  // Toronto
+    { location: [45.5019, -73.5674], size: 0.06 },  // Montreal
+    { location: [49.2827, -123.1207], size: 0.07 }, // Vancouver
+    { location: [51.0447, -114.0719], size: 0.05 }, // Calgary
+    { location: [53.5461, -113.4938], size: 0.05 }, // Edmonton
+
+    // 🇪🇺 Europe
+    { location: [51.5074, -0.1278], size: 0.1 },    // London
+    { location: [48.8566, 2.3522], size: 0.08 },    // Paris
+    { location: [52.5200, 13.4050], size: 0.07 },   // Berlin
+    { location: [41.9028, 12.4964], size: 0.06 },   // Rome
+    { location: [40.4168, -3.7038], size: 0.07 },   // Madrid
+    { location: [52.3676, 4.9041], size: 0.05 },    // Amsterdam
+    { location: [59.3293, 18.0686], size: 0.05 },   // Stockholm
+
+    // 🇦🇺 Australia
+    { location: [-33.8688, 151.2093], size: 0.1 },  // Sydney
+    { location: [-37.8136, 144.9631], size: 0.08 }, // Melbourne
+    { location: [-27.4698, 153.0251], size: 0.06 }, // Brisbane
+    { location: [-31.9505, 115.8605], size: 0.06 }, // Perth
   ],
+
 };
 
 export function Globe({

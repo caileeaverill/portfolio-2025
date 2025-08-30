@@ -1,4 +1,4 @@
-import { SkeletonOne, SkeletonTwo, SkeletonThree } from "./AboutSkeleton";
+import { SkeletonOne, SkeletonTwo, SkeletonThree } from "../components/AboutSkeleton";
 
 export const items = [
     {

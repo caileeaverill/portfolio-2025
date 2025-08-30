@@ -1,7 +1,7 @@
 "use client";
 import { cn } from "@/lib/utils";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
-import { items } from "@/components/AboutContent";
+import { items } from "@/data/AboutContent";
 
 export function About() {
     return (

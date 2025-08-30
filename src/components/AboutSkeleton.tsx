@@ -60,11 +60,11 @@ export const SkeletonThree = () => {
     return (
         <Container
             {...containerMotionProps}
-            className="flex gap-4 flex-wrap w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-row space-x-4 md:flex-nowrap md:gap-0"
+            className="flex gap-4 flex-wrap w-full h-full min-h-[6rem] bg-dot-black/[0.2] flex-row space-x-4 dark:bg-dot-white/[0.2] md:flex-nowrap md:gap-0"
         >
             <CardA
                 {...(isAboveMd ? { variants: first } : {})}
-                className="w-full m-0 md:mr-4 md:w-1/3 md:h-full rounded-2xl bg-white p-4 dark:bg-black/[0.2] dark:border-transparent border border-neutral-200 flex flex-col items-center justify-center"
+                className="w-full m-0 md:mr-4 md:w-1/3 md:h-full rounded-2xl bg-white p-4 border border-neutral-200 flex flex-col items-center justify-center dark:bg-black/[0.2] dark:border-transparent "
             >
                 <div className="flex flex-wrap justify-center items-center gap-2">
                     <img src="/images/react.svg" alt="React logo" height="100" width="100" className="h-10 w-10" />
@@ -79,12 +79,12 @@ export const SkeletonThree = () => {
                     </div>
                     <img src="/images/mongodb-icon.svg" alt="MongoDB logo" height="100" width="100" className="h-10 w-10" />
                 </div>
-                <p className="border border-blue-500 bg-blue-100 dark:bg-blue-900/20 text-blue-600 text-xs rounded-full px-2 py-0.5 mt-4">
+                <p className="border border-blue-500 bg-blue-100 text-blue-600 text-xs rounded-full px-2 py-0.5 mt-4 dark:bg-blue-900/20">
                     Web Development
                 </p>
             </CardA>
 
-            <CardB className="w-full m-0 md:mr-4 relative z-20 md:w-1/3 md:h-full rounded-2xl bg-white p-4 dark:bg-black/[0.2] dark:border-transparent border border-neutral-200 flex flex-col items-center justify-center">
+            <CardB className="w-full m-0 border relative z-20 rounded-2xl bg-white p-4  border-neutral-200 flex flex-col items-center justify-center dark:bg-black/[0.2] dark:border-transparent md:mr-4 md:w-1/3 md:h-full">
                 <div className="flex flex-wrap justify-center items-center gap-4">
                     <img src="/images/figma.svg" alt="Figma logo" height="100" width="100" className="h-10 w-10" />
                     <img src="/images/zendesk.svg" alt="Zendesk logo" height="100" width="100" className="h-10 w-10" />
@@ -93,21 +93,21 @@ export const SkeletonThree = () => {
                     <img src="/images/jira.svg" alt="Jira logo" height="100" width="100" className="h-10 w-10" />
                     <img src="/images/vitejs.svg" alt="Vite.js logo" height="100" width="100" className="h-10 w-10" />
                 </div>
-                <p className="border border-green-500 bg-green-100 dark:bg-green-900/20 text-green-600 text-xs rounded-full px-2 py-0.5 mt-4">
+                <p className="border border-green-500 bg-green-100 text-green-600 text-xs rounded-full px-2 py-0.5 mt-4 dark:bg-green-900/20">
                     Tools
                 </p>
             </CardB>
 
             <CardC
                 {...(isAboveMd ? { variants: second } : {})}
-                className="w-full md:w-1/3 md:h-full rounded-2xl bg-white p-4 dark:bg-black/[0.2] dark:border-transparent border border-neutral-200 flex flex-col items-center justify-center"
+                className="w-full rounded-2xl bg-white p-4 border border-neutral-200 flex flex-col items-center justify-center dark:bg-black/[0.2] dark:border-transparent md:w-1/3 md:h-full"
             >
                 <div className="flex flex-wrap justify-center items-center gap-4">
                     <img src="/images/google-tag-manager.svg" alt="Google Tag Manager logo" height="100" width="100" className="h-10 w-10" />
                     <img src="/images/wcag img.png" alt="WCAG accessibility guidelines logo" height="100" width="100" className="h-10 w-20" />
                     <img src="/images/seo.png" alt="SEO icon" height="100" width="100" className="h-10 w-10" />
                 </div>
-                <p className="border border-red-500 bg-orange-100 dark:bg-red-900/20 text-red-600 text-xs rounded-full px-2 py-0.5 mt-4">
+                <p className="border border-red-500 bg-orange-100 text-red-600 text-xs rounded-full px-2 py-0.5 mt-4 dark:bg-red-900/20">
                     SEO
                 </p>
             </CardC>
