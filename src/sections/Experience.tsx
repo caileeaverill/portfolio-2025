@@ -1,5 +1,5 @@
 import { Timeline } from "@/components/ui/timeline";
-import { timelineData } from "@/data/experienceData";
+import { timelineData } from "@/data/ExperienceData";
 
 export function Experience() {
 
